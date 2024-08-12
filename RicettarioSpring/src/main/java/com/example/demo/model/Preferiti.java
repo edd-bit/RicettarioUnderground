@@ -3,6 +3,8 @@ package com.example.demo.model;
 import java.io.Serializable;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -12,11 +14,14 @@ public class Preferiti implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id_pref;
-//da rivedere un attimo con tipo classe
+	
+	
 	@ManyToOne
 	@JoinColumn(name = "id_utente")
-	private int id_utente;
+	private Utenti utenti;
+	//un id utente legati a molti id preferiti
 
 	private String nome_ricetta;
 
@@ -30,13 +35,7 @@ public class Preferiti implements Serializable {
 		this.id_pref = id_pref;
 	}
 
-	public int getId_utente() {
-		return id_utente;
-	}
-
-	public void setId_utente(int id_utente) {
-		this.id_utente = id_utente;
-	}
+	
 
 	public String getNome_ricetta() {
 		return nome_ricetta;
@@ -52,6 +51,14 @@ public class Preferiti implements Serializable {
 
 	public void setLink(String link) {
 		this.link = link;
+	}
+
+	public Utenti getUtenti() {
+		return utenti;
+	}
+
+	public void setUtenti(Utenti utenti) {
+		this.utenti = utenti;
 	}
 
 }
