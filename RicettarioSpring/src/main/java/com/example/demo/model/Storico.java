@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Storico implements Serializable {
@@ -12,12 +14,13 @@ public class Storico implements Serializable {
 	@Id
 	private int id_storico;
 	
-	// da completare on le annotation join colum e @manytoone
-	private int id_ruolo;
+	@ManyToOne
+	@JoinColumn(name="id_ruolo")
+	private Ruoli ruoli;
 	
-	// da completare on le annotation join colum e @manytoone
-	private int id_dipendente;
-	
+	@ManyToOne
+	@JoinColumn(name="id_dipendente")
+	private Dipendenti dipendenti;
 
 	public int getId_storico() {
 		return id_storico;
@@ -27,23 +30,38 @@ public class Storico implements Serializable {
 		this.id_storico = id_storico;
 	}
 
-	public int getId_ruolo() {
-		return id_ruolo;
+	public Ruoli getRuoli() {
+		return ruoli;
 	}
 
-	public void setId_ruolo(int id_ruolo) {
-		this.id_ruolo = id_ruolo;
+	public void setRuoli(Ruoli ruoli) {
+		this.ruoli = ruoli;
 	}
 
-	public int getId_dipendente() {
-		return id_dipendente;
+	public Dipendenti getDipendenti() {
+		return dipendenti;
 	}
 
-	public void setId_dipendente(int id_dipendente) {
-		this.id_dipendente = id_dipendente;
+	public void setDipendenti(Dipendenti dipendenti) {
+		this.dipendenti = dipendenti;
 	}
 	
+
+	
+}	
 	
 	
 	
-}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
