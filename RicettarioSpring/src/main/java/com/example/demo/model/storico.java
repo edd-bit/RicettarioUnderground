@@ -6,7 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class storico implements Serializable {
+public class Storico implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
