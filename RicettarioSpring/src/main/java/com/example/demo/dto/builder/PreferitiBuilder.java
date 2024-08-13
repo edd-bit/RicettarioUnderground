@@ -2,6 +2,7 @@ package com.example.demo.dto.builder;
 
 import com.example.demo.dto.PreferitiDto;
 import com.example.demo.model.Preferiti;
+import com.example.demo.model.Utenti;
 
 public class PreferitiBuilder {
 
@@ -10,10 +11,13 @@ public class PreferitiBuilder {
 	
 		Preferiti pref = new Preferiti();	
 		
-		pref.setId_pref(pref.getId_pref());
-		pref.setLink(pref.getLink());
-		pref.setNome_ricetta(pref.getNome_ricetta());
-		pref.setUtenti(pref.getUtenti());
+		pref.setId_pref(prefDto.getId_pref());
+		pref.setLink(prefDto.getLink());
+		pref.setNome_ricetta(prefDto.getNome_ricetta());
+		
+		Utenti u = new Utenti();
+		
+		u.setId_utente(prefDto.getId_utente());
 		
 	return pref;
 	
@@ -23,10 +27,10 @@ public class PreferitiBuilder {
 		
 		PreferitiDto prefDto = new PreferitiDto();	
 		
-		prefDto.setId_pref(prefDto.getId_pref());
-		prefDto.setLink(prefDto.getLink());
-		prefDto.setNome_ricetta(prefDto.getNome_ricetta());
-		prefDto.setId_utente(prefDto.getId_utente());
+		prefDto.setId_pref(pref.getId_pref());
+		prefDto.setLink(pref.getLink());
+		prefDto.setNome_ricetta(pref.getNome_ricetta());
+		prefDto.setId_utente(pref.getUtenti().getId_utente());
 		
 	return prefDto;
 	}

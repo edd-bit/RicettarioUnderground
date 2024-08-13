@@ -3,8 +3,9 @@ package com.example.demo.dto;
 public class StoricoDto {
 
 	private int id_storico;
-	private int id_ruolo;
-	private int id_dipendente;
+	private int id_ruolo; //fk
+	private int id_dipendente; //fk
+	
 	public int getId_storico() {
 		return id_storico;
 	}

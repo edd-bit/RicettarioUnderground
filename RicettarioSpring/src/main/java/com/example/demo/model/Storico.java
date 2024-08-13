@@ -15,11 +15,11 @@ public class Storico implements Serializable {
 	private int id_storico;
 	
 	@ManyToOne
-	@JoinColumn(name="id_ruolo")
+	@JoinColumn(name="id_ruolo") //id_ruolo è una fk
 	private Ruoli ruoli;
 	
 	@ManyToOne
-	@JoinColumn(name="id_dipendente")
+	@JoinColumn(name="id_dipendente") //id_dipendente è una fk
 	private Dipendenti dipendenti;
 
 	public int getId_storico() {
