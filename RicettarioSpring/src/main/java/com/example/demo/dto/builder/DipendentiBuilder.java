@@ -5,7 +5,7 @@ import com.example.demo.model.Dipendenti;
 
 public class DipendentiBuilder {
 	
-	
+	// i Builder Sono delle classi che convertono/passono i dati dal Dto alle entity e viceversa
 	public static Dipendenti fromDtoToEntity(DipendentiDto dipDto) {
 		
 		Dipendenti dip = new Dipendenti();
