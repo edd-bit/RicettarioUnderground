@@ -27,7 +27,7 @@ public class Dipendenti implements Serializable {
 	private String passw;
 
 	@OneToMany(mappedBy="dipendenti", cascade = CascadeType.REMOVE)
-	List <Dipendenti> lista_dipendenti;
+	private List <Dipendenti> lista_dipendenti;
 
 		
 	public int getId_dipendente() {
