@@ -20,7 +20,7 @@ public class Ruoli implements Serializable {
     private String descrizione;
     
     @OneToMany(mappedBy="ruoli") //viene preso da storico ruoli
-    List <Storico> lista_storico;
+    private List <Storico> lista_storico;
     
 	public int getId_ruolo() {
 		return id_ruolo;
