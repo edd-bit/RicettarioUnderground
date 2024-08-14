@@ -21,7 +21,7 @@ public class StoricoBuilder {
 			
 		Dipendenti dip = new Dipendenti();
 		
-			dip.setId_dipendente(stoDto.getId_dipendente());
+			dip.setIdDipendente(stoDto.getId_dipendente());
 			
 		return sto;
 		
@@ -33,7 +33,7 @@ public class StoricoBuilder {
 		
 			sDto.setId_storico(sto.getIdStorico());
 			sDto.setId_ruolo(sto.getRuoli().getIdRuolo());
-			sDto.setId_dipendente(sto.getDipendenti().getId_dipendente());
+			sDto.setId_dipendente(sto.getDipendenti().getIdDipendente());
 			
 		return sDto;
 	}

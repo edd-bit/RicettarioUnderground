@@ -10,7 +10,7 @@ public class DipendentiBuilder {
 		
 		Dipendenti dip = new Dipendenti();
 		
-			dip.setId_dipendente(dipDto.getId_dipendente());
+			dip.setIdDipendente(dipDto.getId_dipendente());
 			dip.setNome(dipDto.getNome());
 			dip.setEmail(dipDto.getEmail());
 			dip.setPassw(dipDto.getPassw());
@@ -23,7 +23,7 @@ public class DipendentiBuilder {
 		
 		DipendentiDto dipDto = new DipendentiDto();
 		
-			dipDto.setId_dipendente(dip.getId_dipendente());
+			dipDto.setId_dipendente(dip.getIdDipendente());
 			dipDto.setNome(dip.getNome());
 			dipDto.setEmail(dip.getEmail());
 			dipDto.setPassw(dip.getPassw());

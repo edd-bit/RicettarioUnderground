@@ -8,10 +8,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.example.demo.model.Storico;
 
 public interface StoricoRepository extends JpaRepository<Storico, Integer> {
+// si fa questa cosa per poter utilizzare tutti i metodi che JpaRepository ha in automatico.
 	
-	 //forse int non gli piace 
-//	public List<Storico> findByIdRuolo(int idRuolo);
-//	public List<Storico> findByIdDipendente(int idDipendente);
+	// dopo findBy vuole 'prendere' prima da Ruoli e poi cercare l'id richiesto
+	public List<Storico> findByRuoli_IdRuolo(int idRuolo);
+	public List<Storico> findByDipendenti_idDipendente(int idDipendente);
+	
+	
 	
 	
 }

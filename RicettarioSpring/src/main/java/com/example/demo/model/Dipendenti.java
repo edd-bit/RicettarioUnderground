@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,7 +19,8 @@ public class Dipendenti implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_dipendente;
+	@Column(name="id_dipendente")
+	private int idDipendente;
 	
 	private String nome;
 	
@@ -29,13 +31,13 @@ public class Dipendenti implements Serializable {
 	@OneToMany(mappedBy="dipendenti", cascade = CascadeType.REMOVE)
 	private List <Storico> dipendenti;
 
-		
-	public int getId_dipendente() {
-		return id_dipendente;
+
+	public int getIdDipendente() {
+		return idDipendente;
 	}
 
-	public void setId_dipendente(int id_dipendente) {
-		this.id_dipendente = id_dipendente;
+	public void setIdDipendente(int idDipendente) {
+		this.idDipendente = idDipendente;
 	}
 
 	public String getNome() {
