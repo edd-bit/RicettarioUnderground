@@ -27,7 +27,7 @@ public class Dipendenti implements Serializable {
 	private String passw;
 
 	@OneToMany(mappedBy="dipendenti", cascade = CascadeType.REMOVE)
-	private List <Dipendenti> lista_dipendenti;
+	private List <Storico> dipendenti;
 
 		
 	public int getId_dipendente() {
@@ -62,13 +62,16 @@ public class Dipendenti implements Serializable {
 		this.passw = passw;
 	}
 
-	public List<Dipendenti> getLista_dipendenti() {
-		return lista_dipendenti;
+	public List<Storico> getDipendenti() {
+		return dipendenti;
 	}
 
-	public void setLista_dipendenti(List<Dipendenti> lista_dipendenti) {
-		this.lista_dipendenti = lista_dipendenti;
+	public void setDipendenti(List<Storico> dipendenti) {
+		this.dipendenti = dipendenti;
 	}
+
+	
+
 	
 	
 	
