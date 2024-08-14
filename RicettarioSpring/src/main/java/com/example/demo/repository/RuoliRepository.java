@@ -8,7 +8,7 @@ import com.example.demo.model.Ruoli;
 
 public interface RuoliRepository extends JpaRepository<Ruoli, Integer> {
 
-	public List<Ruoli> findByid_ruolo(int id_ruolo);
+	public List<Ruoli> findByIdRuolo(int idRuolo);
 
 	public List<Ruoli> findByDescrizione(String descrizione);
 }

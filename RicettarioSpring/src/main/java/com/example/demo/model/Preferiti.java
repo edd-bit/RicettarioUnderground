@@ -2,6 +2,7 @@ package com.example.demo.model;
 
 import java.io.Serializable;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,34 +16,34 @@ public class Preferiti implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_pref;
-	
+	@Column(name="id_pref")
+	private int idPref;
 	
 	@ManyToOne
 	@JoinColumn(name = "id_utente")
 	private Utenti utenti;
 	//un id utente legati a molti id preferiti
 
-	private String nome_ricetta;
+	@Column(name="nome_ricetta")
+	private String nomeRicetta;
 
 	private String link;
 
-	public int getId_pref() {
-		return id_pref;
+
+	public int getIdPref() {
+		return idPref;
 	}
 
-	public void setId_pref(int id_pref) {
-		this.id_pref = id_pref;
+	public void setIdPref(int idPref) {
+		this.idPref = idPref;
 	}
 
-	
-
-	public String getNome_ricetta() {
-		return nome_ricetta;
+	public String getNomeRicetta() {
+		return nomeRicetta;
 	}
 
-	public void setNome_ricetta(String nome_ricetta) {
-		this.nome_ricetta = nome_ricetta;
+	public void setNomeRicetta(String nomeRicetta) {
+		this.nomeRicetta = nomeRicetta;
 	}
 
 	public String getLink() {

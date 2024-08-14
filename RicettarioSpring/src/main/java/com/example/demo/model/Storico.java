@@ -2,6 +2,7 @@ package com.example.demo.model;
 
 import java.io.Serializable;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -12,7 +13,8 @@ public class Storico implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	private int id_storico;
+	@Column(name="id_storico")
+	private int idStorico;
 	
 	@ManyToOne
 	@JoinColumn(name="id_ruolo") //id_ruolo è una fk
@@ -22,12 +24,12 @@ public class Storico implements Serializable {
 	@JoinColumn(name="id_dipendente") //id_dipendente è una fk
 	private Dipendenti dipendenti;
 
-	public int getId_storico() {
-		return id_storico;
+	public int getIdStorico() {
+		return idStorico;
 	}
 
-	public void setId_storico(int id_storico) {
-		this.id_storico = id_storico;
+	public void setIdStorico(int idStorico) {
+		this.idStorico = idStorico;
 	}
 
 	public Ruoli getRuoli() {

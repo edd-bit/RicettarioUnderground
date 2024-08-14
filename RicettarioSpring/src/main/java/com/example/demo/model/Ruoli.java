@@ -3,6 +3,7 @@ package com.example.demo.model;
 import java.io.Serializable;
 import java.util.List;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,19 +16,20 @@ public class Ruoli implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // non 'dovrebbe' portare nessun problema
-    private int id_ruolo;
+    @Column(name="id_ruolo")
+    private int idRuolo;
     
     private String descrizione;
     
     @OneToMany(mappedBy="ruoli") //viene preso da storico ruoli
     private List <Storico> lista_storico;
     
-	public int getId_ruolo() {
-		return id_ruolo;
+	public int getIdRuolo() {
+		return idRuolo;
 	}
 
-	public void setId_ruolo(int id_ruolo) {
-		this.id_ruolo = id_ruolo;
+	public void setIdRuolo(int idRuolo) {
+		this.idRuolo = idRuolo;
 	}
 
 	public String getDescrizione() {

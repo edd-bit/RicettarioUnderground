@@ -3,6 +3,7 @@ package com.example.demo.model;
 import java.io.Serializable;
 import java.util.List;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,7 +19,8 @@ public class Utenti implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_utente;
     
-    private String email_utente;
+    @Column(name="email_utente")
+    private String emailUtente;
     
     private String passw_utente;
     
@@ -35,12 +37,12 @@ public class Utenti implements Serializable {
 		this.id_utente = id_utente;
 	}
 
-	public String getEmail_utente() {
-		return email_utente;
+	public String getEmailUtente() {
+		return emailUtente;
 	}
 
-	public void setEmail_utente(String email_utente) {
-		this.email_utente = email_utente;
+	public void setEmailUtente(String emailUtente) {
+		this.emailUtente = emailUtente;
 	}
 
 	public String getPassw_utente() {

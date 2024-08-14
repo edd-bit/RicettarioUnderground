@@ -10,8 +10,8 @@ import com.example.demo.model.Storico;
 public interface StoricoRepository extends JpaRepository<Storico, Integer> {
 	
 	 //forse int non gli piace 
-	public List<Storico> findByIdRuolo(int id_ruolo);
-	public List<Storico> findByIdDipendente(int id_dipendente);
+//	public List<Storico> findByIdRuolo(int idRuolo);
+//	public List<Storico> findByIdDipendente(int idDipendente);
 	
 	
 }

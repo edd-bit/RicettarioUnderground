@@ -8,8 +8,8 @@ import com.example.demo.model.Preferiti;
 
 public interface PreferitiRepository extends JpaRepository<Preferiti, Integer>{
 	
-	// like %
-	public List<Preferiti> findByNomeRicettaLike (String nome_ricetta);
+	// find select, from = Preferiti, Where = nome_ricetta=? (parametro che tu gli passi in input)   + like %
+	public List<Preferiti> findByNomeRicettaLike (String nomeRicetta);
 	
 }
 
