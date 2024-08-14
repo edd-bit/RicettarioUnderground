@@ -10,7 +10,7 @@ public class RuoliBuilder {
 		Ruoli ruoli = new Ruoli();
 		
 		ruoli.setDescrizione(ruoDto.getDescrizione());
-		ruoli.setId_ruolo(ruoDto.getId_ruolo());
+		ruoli.setIdRuolo(ruoDto.getId_ruolo());
 		
 		return ruoli;
 	}
@@ -20,7 +20,7 @@ public class RuoliBuilder {
 		RuoliDto ruoliDto = new RuoliDto();
 		
 		ruoliDto.setDescrizione(ruo.getDescrizione());
-		ruoliDto.setId_ruolo(ruo.getId_ruolo());
+		ruoliDto.setId_ruolo(ruo.getIdRuolo());
 		
 		return ruoliDto;
 	}

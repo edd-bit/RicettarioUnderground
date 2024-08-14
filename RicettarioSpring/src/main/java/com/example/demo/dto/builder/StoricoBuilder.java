@@ -13,11 +13,11 @@ public class StoricoBuilder {
 		
 		Storico sto = new Storico();
 		
-			sto.setId_storico(stoDto.getId_storico());
+			sto.setIdStorico(stoDto.getId_storico());
 		
 		Ruoli ruo = new Ruoli();
 		
-			ruo.setId_ruolo(stoDto.getId_ruolo());
+			ruo.setIdRuolo(stoDto.getId_ruolo());
 			
 		Dipendenti dip = new Dipendenti();
 		
@@ -31,8 +31,8 @@ public class StoricoBuilder {
 		
 		StoricoDto sDto = new StoricoDto();
 		
-			sDto.setId_storico(sto.getId_storico());
-			sDto.setId_ruolo(sto.getRuoli().getId_ruolo());
+			sDto.setId_storico(sto.getIdStorico());
+			sDto.setId_ruolo(sto.getRuoli().getIdRuolo());
 			sDto.setId_dipendente(sto.getDipendenti().getId_dipendente());
 			
 		return sDto;

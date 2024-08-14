@@ -61,7 +61,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
+	
 	<!-- per usare le jsp -->
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
@@ -85,6 +85,7 @@
             <artifactId>jakarta.servlet.jsp.jstl</artifactId>
             <!-- <version>3.0.1</version> -->
         </dependency>
+        </dependencies>
         
 	<build>
 		<plugins>

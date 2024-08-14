@@ -11,9 +11,9 @@ public class PreferitiBuilder {
 	
 		Preferiti pref = new Preferiti();	
 		
-		pref.setId_pref(prefDto.getId_pref());
+		pref.setIdPref(prefDto.getId_pref());
 		pref.setLink(prefDto.getLink());
-		pref.setNome_ricetta(prefDto.getNome_ricetta());
+		pref.setNomeRicetta(prefDto.getNome_ricetta());
 		
 		Utenti u = new Utenti();
 		
@@ -27,9 +27,9 @@ public class PreferitiBuilder {
 		
 		PreferitiDto prefDto = new PreferitiDto();	
 		
-		prefDto.setId_pref(pref.getId_pref());
+		prefDto.setId_pref(pref.getIdPref());
 		prefDto.setLink(pref.getLink());
-		prefDto.setNome_ricetta(pref.getNome_ricetta());
+		prefDto.setNome_ricetta(pref.getNomeRicetta());
 		prefDto.setId_utente(pref.getUtenti().getId_utente());
 		
 	return prefDto;
