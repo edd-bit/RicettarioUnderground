@@ -9,17 +9,27 @@
 
 <meta charset="UTF-8">
 <title>Home RicettarioSpring</title>
+
 </head>
 <body>
 
 	<h3>Questa è la home di RicettarioSpring</h3>
+	<br>
+	<br>
 	
-	
-	<a href="/ricettariospring/utente/formAccessoUtente"><button btn btn-primary> Accedi come Utente</button></a>
+	<a href="/ricettariospring/utente/formAccessoUtente"><button class = "btn btn-primary"> Accedi come Utente</button></a>
 	<!-- ragionamento di Sonia e Marco  -->
 	<!-- <input type="submit" value="homeUtente"/> -->
 	<br>
 	<br>
-	<button>Accedi come Dipendente</button>
+	<button class = "btn btn-primary">Accedi come Dipendente</button>
+	<br>
+	<br>
+	<h5>Sei un nuovo utente?</h5>
+	<br>
+	<a href="/ricettariospring/utente/formRegistrazioneUtenti"><button class = "btn btn-primary">Registrati</button></a>
 </body>
 </html>
+
+
+
