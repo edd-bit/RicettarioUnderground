@@ -13,7 +13,7 @@ public interface UtentiRepository extends JpaRepository<Utenti, Integer> {
 	
 	public List<Utenti> findByEmailUtente(String emailUtente);
 	public List<Utenti> findByEmailUtenteLike(String emailUtente);
-	
+	public List<Utenti> findByEmailUtenteAndPasswUtente(String emailUtente, String passwUtente);
 
 	
 }

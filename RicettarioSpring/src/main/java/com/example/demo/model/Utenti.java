@@ -22,7 +22,8 @@ public class Utenti implements Serializable {
     @Column(name="email_utente")
     private String emailUtente;
     
-    private String passw_utente;
+    @Column(name="passw_utente")
+    private String passwUtente;
     
     //la classe Preferiti è legata grazie alla riga 25 di questa classe Utenti
     @OneToMany(mappedBy="utenti")
@@ -45,12 +46,14 @@ public class Utenti implements Serializable {
 		this.emailUtente = emailUtente;
 	}
 
-	public String getPassw_utente() {
-		return passw_utente;
+	
+
+	public String getPasswUtente() {
+		return passwUtente;
 	}
 
-	public void setPassw_utente(String passw_utente) {
-		this.passw_utente = passw_utente;
+	public void setPasswUtente(String passwUtente) {
+		this.passwUtente = passwUtente;
 	}
 
 	public List<Preferiti> getLista_preferiti() {

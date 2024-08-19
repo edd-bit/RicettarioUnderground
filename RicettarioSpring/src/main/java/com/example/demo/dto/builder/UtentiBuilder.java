@@ -11,7 +11,7 @@ public class UtentiBuilder {
 
 	        ut.setId_utente(utDto.getId_utente());
 	        ut.setEmailUtente(utDto.getEmail_utente());
-	        ut.setPassw_utente(utDto.getPassw_utente());
+	        ut.setPasswUtente(utDto.getPassw_utente());
 	        return ut;
 	    }
 
@@ -20,7 +20,7 @@ public class UtentiBuilder {
 
 	        utDto.setId_utente(ut.getId_utente());
 	        utDto.setEmail_utente(ut.getEmailUtente());
-	        utDto.setPassw_utente(ut.getPassw_utente());
+	        utDto.setPassw_utente(ut.getPasswUtente());
 	        return utDto;
 
 	    }

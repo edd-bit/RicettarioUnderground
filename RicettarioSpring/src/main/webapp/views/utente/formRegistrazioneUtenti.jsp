@@ -31,6 +31,8 @@
     
     
 </form:form>
-
+<br>
+<br>
+<a href="http://localhost:8080/ricettariospring/home"><button class = "btn btn-outline-info">Vai alla Homepage</button></a>
 </body>
 </html>

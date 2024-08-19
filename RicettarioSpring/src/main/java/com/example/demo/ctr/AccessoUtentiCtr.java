@@ -30,9 +30,12 @@ public class AccessoUtentiCtr {
 		
 		UtentiDto u = new UtentiDto();
 		
+		
 		model.addAttribute("utenteForm", u);
 		
-        return "formAccessoUtente";
+		uRep.findByEmailUtenteAndPasswUtente(u.getEmail_utente(), u.getPassw_utente()); //ritorna una lista
+		
+        return "utente/formAccessoUtente";
     }
 	
 	@GetMapping("/formRegistrazioneUtenti")
@@ -42,18 +45,27 @@ public class AccessoUtentiCtr {
 		
 		model.addAttribute("formRegistrazioneU", uDto);
 		
-		return "formRegistrazioneUtenti";
+		return "utente/formRegistrazioneUtenti";
 	}
 	
 	
 	@PostMapping("/inserimentoNuovoUtente")
 	public String inserimentoNuovoUtente (@ModelAttribute ("formRegistrazioneU")UtentiDto uDto) { 
 	// RequestBody è usata per mappare il corpo della richiesta HTTP all'oggetto UtentiDto	
-		
+	/*
+	  @ModelAttribute prende l’attributo con scritto studentForm è lo inserisce dentro Studente s
+		path relativo aggiunge l’action nella pagina dove ci troviamo 
+		assoluto usa tutto il link 
+	
+	 */
+		/* da eliminare perché la funzione è già svolta da riga 66
 		Utenti u = new Utenti();
 		
+		
 		u.setEmailUtente(uDto.getEmail_utente());
-		u.setPassw_utente(uDto.getPassw_utente());
+		u.setPasswUtente(uDto.getPassw_utente());
+		
+		*/
 		
 		uRep.save(UtentiBuilder.fromDtoToEntity(uDto));
 		/* Questa riga di codice sta prendendo un DTO (uDto), lo sta convertendo 
@@ -62,8 +74,17 @@ public class AccessoUtentiCtr {
 		 * entità nel database attraverso il repository (uRep).
 		 */
 
-		return "registrazioneUtenteSuccess";
+		return "utente/registrazioneUtenteSuccess";
 	}
+	
+	@PostMapping("/loginUtente")
+	public String loginUtente(@RequestBody String entity) {
+		
+		
+		
+		return entity;
+	}
+	
 	
 	
 //	@GetMapping("/accessosuccesso")
