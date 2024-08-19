@@ -17,7 +17,7 @@
 <h3>Form di Accesso utente</h3>
 
 
-<form:form modelAttribute="utenteForm" method="POST" action="/ricettariospring/utente/formAccessoUtente">
+<form:form modelAttribute="utenteForm" method="POST" action="/ricettariospring/utente/postFormAccessoUtente">
 
     <p>
         <form:label path="email_utente">Email Utente:</form:label>
@@ -33,8 +33,17 @@
     sulla home ma di UTENTE -->
 </form:form>
 <br>
-<br>
 
+<%String msg = (String) request.getAttribute("error");
+if(msg==null){
+	msg=" ";
+	out.println(msg);
+}
+%>
+
+<%=msg %>
+<br>
+<br>
 <a href="http://localhost:8080/ricettariospring/home"><button class = "btn btn-outline-info">Vai alla Homepage</button></a>
 </body>
 </html>

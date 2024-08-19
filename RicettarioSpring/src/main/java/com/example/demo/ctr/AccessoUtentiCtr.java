@@ -1,5 +1,8 @@
 package com.example.demo.ctr;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,7 +27,7 @@ public class AccessoUtentiCtr {
 	private UtentiRepository uRep;
 	// cerchiamo di capire a cosa serve l'Autowired
 	
-	
+	//pre accesso utente 
 	@GetMapping("/formAccessoUtente")
     public String formAccessoUtente(Model model) {
 		
@@ -33,8 +36,36 @@ public class AccessoUtentiCtr {
 		
 		model.addAttribute("utenteForm", u);
 		
-		uRep.findByEmailUtenteAndPasswUtente(u.getEmail_utente(), u.getPassw_utente()); //ritorna una lista
+		return "utente/formAccessoUtente";
+    }
+	//post login utente 
+	@PostMapping("/postFormAccessoUtente")
+    public String postformAccessoUtente(Model model, @ModelAttribute("utenteForm") UtentiDto udto) {
 		
+		
+		
+		
+		model.addAttribute("utenteForm", udto);
+		
+		List<Utenti> utentiTrovati=uRep.findByEmailUtenteAndPasswUtente(udto.getEmail_utente(),udto.getPassw_utente()); 
+		
+		for (Utenti utenti : utentiTrovati) {
+			System.out.println(utenti);
+		}
+		System.out.println(udto.getEmail_utente()+" "+udto.getPassw_utente());
+		
+		if (!utentiTrovati.isEmpty()) {
+			System.out.println("sto qua ");
+			return "utente/homeUtente";
+		}else {
+			model.addAttribute("error", "Email o password Errati");
+		}
+		
+		 
+
+		
+		
+		System.out.println("fuori if");
         return "utente/formAccessoUtente";
     }
 	
