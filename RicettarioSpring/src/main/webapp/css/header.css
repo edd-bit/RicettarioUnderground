@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+body{
+	background-color: pink;
+	width:1000px;
+}
+
+#divheader{
+	margin: 5px;
+	background-color: orange;
+	display:flex;
+}
+#divheader p{
+	margin:10px;
+	margin-left:33%;
+	border: 3px solid black;
+}
