@@ -1,6 +1,6 @@
 package com.example.demo.ctr;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,8 +42,7 @@ public class AccessoUtentiCtr {
 
 		model.addAttribute("utenteForm", udto);
 
-		List<Utenti> utentiTrovati = uRep.findByEmailUtenteAndPasswUtente(udto.getEmail_utente(),
-				udto.getPassw_utente());
+		List<Utenti> utentiTrovati = uRep.findByEmailUtenteAndPasswUtente(udto.getEmail_utente(),udto.getPassw_utente());
 
 		for (Utenti utenti : utentiTrovati) {
 			System.out.println(utenti);
@@ -62,27 +61,18 @@ public class AccessoUtentiCtr {
 	}
 
 	@GetMapping("/formRegistrazioneUtenti")
-	public String formRegistrazioneUtenti(Model model,@ModelAttribute("utenteForm") UtentiDto udto) {
+	public String formRegistrazioneUtenti(Model model) {
+		
+		
+			UtentiDto uDto = new UtentiDto();
 
-		model.addAttribute("formRegistrazioneUtenti", udto);
-		List<Utenti> utentiTrovati = uRep.findByEmailUtenteAndPasswUtente(udto.getEmail_utente(),udto.getPassw_utente());
+	        model.addAttribute("formRegistrazioneU", uDto);
 
-		for (Utenti utenti : utentiTrovati) {
-			System.out.println(utenti);
-		}
-		System.out.println(udto.getEmail_utente() + " " + udto.getPassw_utente());
-
-		if (!utentiTrovati.isEmpty()) {
-			System.out.println("Accesso avvvenuto con successo");
-			return "/home";
-		} else {
-			model.addAttribute("error", "Email già esistente");
-		}
-		return "utente/formRegistrazioneUtenti";
+	        return "utente/formRegistrazioneUtenti";
 	}
 
 	@PostMapping("/inserimentoNuovoUtente")
-	public String inserimentoNuovoUtente(@ModelAttribute("formRegistrazioneU") UtentiDto uDto) {
+	public String inserimentoNuovoUtente(Model model,@ModelAttribute("formRegistrazioneU") UtentiDto udto) {
 		// RequestBody è usata per mappare il corpo della richiesta HTTP all'oggetto
 		// UtentiDto
 		/*
@@ -100,8 +90,20 @@ public class AccessoUtentiCtr {
 		 * u.setPasswUtente(uDto.getPassw_utente());
 		 * 
 		 */
+		
+		List<Utenti> utentiTrovati = uRep.findByEmailUtenteAndPasswUtente(udto.getEmail_utente(),udto.getPassw_utente());
+		
+		//if(se lista non vuota)....
+		if (!utentiTrovati.isEmpty()) {
+			
+			model.addAttribute("error", "Email già usata");
+			return "utente/formRegistrazioneUtenti";
+		} else {
+			uRep.save(UtentiBuilder.fromDtoToEntity(udto));
+			
+		}
 
-		uRep.save(UtentiBuilder.fromDtoToEntity(uDto));
+		
 		/*
 		 * Questa riga di codice sta prendendo un DTO (uDto), lo sta convertendo in
 		 * un'entità (Utenti) utilizzando un metodo statico (fromDtoToEntity) di una

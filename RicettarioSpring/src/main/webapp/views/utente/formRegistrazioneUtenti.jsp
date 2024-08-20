@@ -32,6 +32,16 @@
     
 </form:form>
 <br>
+<%String msgerr = (String) request.getAttribute("error");
+if(msgerr==null){
+	msgerr=" ";
+	out.println(msgerr);
+}
+	
+%>
+
+<%=msgerr %>
+<br>
 <br>
 <a href="http://localhost:8080/ricettariospring/home"><button class = "btn btn-outline-info">Vai alla Homepage</button></a>
 </body>
