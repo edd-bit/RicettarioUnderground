@@ -17,7 +17,7 @@
 <h3>Form di Accesso utente</h3>
 
 
-<form:form modelAttribute="utenteForm" method="POST" action="/ricettariospring/utente/postFormAccessoUtente">
+<form:form modelAttribute="utenteForm" method="POST" action="/ricettariospring/utente/homeutente">
 
     <p>
         <form:label path="email_utente">Email Utente:</form:label>
