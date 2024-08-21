@@ -1,4 +1,4 @@
-alert("sei in home");
+//alert("sei in home");
 document.addEventListener("DOMContentLoaded", function(){
 	
 	const divRicette = document.querySelector(".divRicette");
