@@ -7,6 +7,8 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/header.css">
+<script src="${pageContext.request.contextPath}/JavaScript/home.js"> </script>
+
 <meta charset="UTF-8">
 <title>Home RicettarioSpring</title>
 
@@ -14,28 +16,61 @@
 <body>
 
 <div id=divheader>
-	<p>Home</p>
-	<p>Titolo</p>
+	<div>RicettarioSpring</div>
+	<div class=notVisible></div>
 	
-	<p>Accedi</p>
+	<div><a href="/ricettariospring/utente/formAccessoUtente"><button class = "btn btn-primary"> Accedi come Utente</button></a></div>
 </div>
 
 <!-- ---------------------------------- -->
+<div class=generale>
 	<h3>Questa è la home di RicettarioSpring</h3>
-	<br>
-	<br>
+		<br>
+		<br>
 	
-	<a href="/ricettariospring/utente/formAccessoUtente"><button class = "btn btn-primary"> Accedi come Utente</button></a>
+	<!--<a href="/ricettariospring/utente/formAccessoUtente"><button class = "btn btn-primary"> Accedi come Utente</button></a>-->
 	<!-- ragionamento di Sonia e Marco  -->
 	<!-- <input type="submit" value="homeUtente"/> -->
-	<br>
-	<br>
+		
 	<button class = "btn btn-primary">Accedi come Dipendente</button>
-	<br>
-	<br>
-	<h5>Sei un nuovo utente?</h5>
-	<br>
-	<a href="/ricettariospring/utente/formRegistrazioneUtenti"><button class = "btn btn-primary">Registrati</button></a>
+		<br>
+		<br>
+	<div class=regNewU>
+		<h5>Sei un nuovo utente?</h5>
+		<br>
+		<a  id=bSx href="/ricettariospring/utente/formRegistrazioneUtenti"><button  class = "btn btn-primary">Registrati</button></a>
+	</div>
+	
+	
+</div>
+	<div id=scopriRicette>
+		<button id=btnScopriRic>
+			<h3>
+				Scopri 
+					<br>
+				le nostre ricette
+			</h3>
+		</button>
+	</div>
+	
+	<div class=divRicette>
+		<button class=btnRic>
+			Antipasti
+		</button>
+		<button class=btnRic>
+			Primi
+		</button>
+		<button class=btnRic>
+			Secondi
+		</button>
+		<button class=btnRic>
+			Contori
+		</button>
+		<button class=btnRic>
+			Dolci
+		</button>
+	</div>
+	
 </body>
 </html>
 

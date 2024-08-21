@@ -1,17 +1,85 @@
 @charset "UTF-8";
 
 body{
-	background-color: pink;
-	width:1000px;
+	margin:0;
+	background-color: white;
+	
 }
 
-#divheader{
-	margin: 5px;
-	background-color: orange;
+#divheader {
+    margin: 0px;
+    background-color: orange;
+    display: flex;
+    justify-content: space-between; /* Distribuisce equamente lo spazio tra gli elementi */
+    align-items: center; 
+    padding: 10px; 
+}
+
+#divheader div {
+    margin: 1px; 
+    border: 1px solid black;
+    padding: 10px;
+    flex: 1; /* Permette ai paragrafi di occupare uno spazio uguale */
+    text-align: center; 
+    background-color: #7fc5a7;
+}
+.generale{
 	display:flex;
+	
+    justify-content: space-between; 
+    
 }
-#divheader p{
-	margin:10px;
-	margin-left:33%;
-	border: 3px solid black;
+#bSx{
+	 float: right;
 }
+.generale>button{
+	visibility: hidden;
+}
+.notVisible{
+	visibility: hidden;
+}
+
+#scopriRicette{
+	display:flex;
+	justify-content: center; 
+    align-items: center; 
+    margin-top:100px;
+    border-radius: 10px;
+}
+
+#btnScopriRic{
+	transition: transform 0.5s ease-in-out 0.2s;
+	border-radius: 5px;
+}
+
+
+#btnScopriRic:hover{
+	
+	background-color: orange;
+	transform: scale(1.1);
+}
+.divRicette{
+	margin-top:5px;
+	visibility:hidden;
+	display:flex;
+	justify-content: center; 
+    align-items: center; 
+	
+}
+
+.divRicette.show{
+    visibility: visible; 
+    opacity: 1; 
+}
+
+.btnRic{
+	
+	
+	width:200px;
+	height:200px;
+	margin:5px;
+}
+.btnRic:hover{
+	background-color: orange;	
+}
+	
