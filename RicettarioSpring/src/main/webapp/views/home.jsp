@@ -57,9 +57,11 @@
 		<button class=btnRic>
 			Antipasti
 		</button>
-		<button class=btnRic>
-			Primi
-		</button>
+			<a href="${pageContext.request.contextPath}/primi/PrimiPiatti">
+   				 <button class="btnRic">
+       				 Primi
+    			</button>
+			</a>
 		<button class=btnRic>
 			Secondi
 		</button>
