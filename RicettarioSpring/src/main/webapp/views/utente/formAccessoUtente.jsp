@@ -31,7 +31,7 @@
 
     <p>
         <form:label path="email_utente">Email Utente:</form:label><br>
-        <form:input path="email_utente" placeholder="email@gmail.com"/>
+        <form:input path="email_utente" placeholder="esempio@email.com"/>
     </p>
     
     <p>

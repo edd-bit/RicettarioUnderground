@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+
+*{
+	background-color: #F6F3EE;
+	
+}
+
+body{
+	margin:0;
+	background-color: #F6F3EE;
+	
+}
+
+/* questo è il colore dell'header */
+#divheader {
+	height: 60px;
+    margin: 0px;
+    background-color: #E9E5DC;
+    display: flex;
+    justify-content: space-between; /* Distribuisce equamente lo spazio tra gli elementi */
+    align-items: center; 
+    padding: 10px;
+    
+}
+
+#divheader img {
+	width: 150px;
+	height: 50px;
+	background-color: transparent;
+}
+
+/* questo è il colore dei bottoni interni all'header */
+#divheader div {
+    margin: 1px; 
+    padding: 10px;
+    flex: 1; /* Permette ai div di occupare uno spazio uguale */
+    text-align: center; 
+    background-color: transparent;
+    /*background-color: #ACCCAC;*/
+}
+#divH1 img{
+	margin-right: 70%;
+}
+#divH1 a{
+	text-decoration: none;  /* Rimuove la sottolineatura */
+    color: inherit;         /* Imposta il colore del link come quello del testo circostante */
+   	background-color: transparent;  /* Rimuove eventuali sfondi */
+}
+#divH2 a{
+	
+	margin-left: 70%;
+	text-decoration: none;  /* Rimuove la sottolineatura */
+    color: inherit;         /* Imposta il colore del link come quello del testo circostante */
+    font-weight: normal;    /* Ripristina il peso del font */
+    background-color: transparent;  /* Rimuove eventuali sfondi */
+}
+#divH2 a:hover{
+	border-bottom: 2px solid grey;
+}
+
+
+
+
+
+footer{
+	background-color: grey;
+	border:1px solid black;
+	min-height:40px;
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+footer p{
+	background-color: grey;
+	color:black;
+	font-size: 13px;
+	margin:1px;
+	
+}
+footer a{
+	background-color: grey;
+	color:black;
+	font-size: 10px;
+	text-decoration: none;
+}
+footer a:hover{
+	color:white;
+	border-bottom:1px solid black;
+}
