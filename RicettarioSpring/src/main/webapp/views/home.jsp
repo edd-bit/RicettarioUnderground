@@ -16,11 +16,11 @@
 <body>
 
 <div id=divheader>
-	<img alt="logo" src="${pageContext.request.contextPath}/img/RICETTARIO_LOGO1.png">
+	<div id=divH1> <a href="http://localhost:8080/ricettariospring/home"><img alt="logo" src="${pageContext.request.contextPath}/img/RICETTARIO_LOGO1.png"></a></div> 
 	
 	<div class=notVisible></div>
 	
-	<div><a href="/ricettariospring/utente/formAccessoUtente"><button class = "btn btn-primary"> Accedi come Utente</button></a></div>
+	<div id=divH2><a href="/ricettariospring/utente/formAccessoUtente"> Accedi</a></div>
 </div>
 
 <!-- ---------------------------------- -->
@@ -33,9 +33,9 @@
 	<!-- ragionamento di Sonia e Marco  -->
 	<!-- <input type="submit" value="homeUtente"/> -->
 		
-	<button class = "btn btn-primary">Accedi come Dipendente</button>
+	<!--<button class = "btn btn-primary">Accedi come Dipendente</button>
 		<br>
-		<br>
+		<br>-->
 	<!--
 	<div class=regNewU>
 		<h5>Sei un nuovo utente?</h5>
@@ -48,11 +48,9 @@
 </div>
 	<div id=scopriRicette>
 		<button id=btnScopriRic>
-			<h3>
 				Scopri 
 					<br>
 				le nostre ricette
-			</h3>
 		</button>
 	</div>
 	
@@ -75,6 +73,17 @@
 			Dolci
 		</button>
 	</div>
+	<br>
+	<footer id="footer">
+    	<p>
+    		&copy; 2024 Ricettario. Tutti i diritti riservati. | 
+    		<br>
+    		<a href="/privacy-policy" >Privacy Policy</a> | 
+    		<a href="/terms" >Termini e Condizioni</a> | 
+    		<a href="/contatti" >Contatti |</a>
+    		<a href="/sviluppatori" >Sviluppatori</a>
+    	</p>
+	</footer>
 	
 </body>
 </html>

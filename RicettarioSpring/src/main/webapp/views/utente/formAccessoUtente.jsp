@@ -17,6 +17,13 @@
 <title>Form di Accesso utente</title>
 </head>
 <body>
+<div id=divheader>
+	<div id=divH1> <a href="http://localhost:8080/ricettariospring/home"><img alt="logo" src="${pageContext.request.contextPath}/img/RICETTARIO_LOGO1.png"></a></div> 
+	
+	<div class=notVisible></div>
+	
+	<div id=divH2><a href="/ricettariospring/utente/formAccessoUtente"> Accedi</a></div>
+</div>
 
 <div class=container id=div1>
 <h3>Form di Accesso utente</h3>
@@ -24,14 +31,15 @@
 
     <p>
         <form:label path="email_utente">Email Utente:</form:label><br>
-        <form:input path="email_utente" />
+        <form:input path="email_utente" placeholder="email@gmail.com"/>
     </p>
+    
     <p>
         <form:label path="passw_utente">Password:</form:label><br>
-        <form:input path="passw_utente" type="password" />
+        <form:input path="passw_utente" type="password" placeholder="Password"/>
     </p>
     <br>
-    <input type="submit" value="Accedi" />
+    <input type="submit" value="Accedi" class="btn btn-info" />
     
     <!-- Al cliccare di Accedi mi dovrà reindirizzare 
     sulla home ma di UTENTE -->
@@ -49,17 +57,30 @@ if(msg==null){
 
 <%=msg %>
 <br>
-<br>
-<a href="http://localhost:8080/ricettariospring/home"><button class = "btn btn-outline-info">Vai alla Homepage</button></a>
+
+<!--<a href="http://localhost:8080/ricettariospring/home"><button class = "btn btn-outline-info">Vai alla Homepage</button></a>-->
 
 <!-- Button per nuova registrazione -->
+<p id=linea>___________________________</p>
 	<div class=regNewU>
-		<p>Sei un nuovo utente?</p>
+	
+		<a id=bSx href="/ricettariospring/utente/formRegistrazioneUtenti"><button class=bReg >Registrati</button></a>
 		<br>
-		<a  id=bSx href="/ricettariospring/utente/formRegistrazioneUtenti"><button  class = "btn btn-primary">Registrati</button></a>
+		<p>Sei un nuovo utente?</p>
 	</div>
-	<br><br>
+	<br>
+</div>
 
+	<footer id="footer">
+    	<p>
+    		&copy; 2024 Ricettario. Tutti i diritti riservati. | 
+    		<br>
+    		<a href="/privacy-policy" >Privacy Policy</a> | 
+    		<a href="/terms" >Termini e Condizioni</a> | 
+    		<a href="/contatti" >Contatti |</a>
+    		<a href="/contatti" >Sviluppatori</a>
+    	</p>
+	</footer>
 </body>
 
 
