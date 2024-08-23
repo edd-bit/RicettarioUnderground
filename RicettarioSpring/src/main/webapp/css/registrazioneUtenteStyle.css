@@ -8,7 +8,7 @@
 
 body{
 	margin:0;
-	background-color: #F6F3EE;
+	background-color: #F6F3EE !important;
 	
 }
 
@@ -59,8 +59,36 @@ body{
 	border-bottom: 2px solid grey;
 }
 
+#div1{
+	border: 1px solid black;
+	border-radius: 10px;
+	margin: 5% auto;
+	width: 25%;	
+}
 
+#div1 h3, form{
+	text-align: center;
+	
+}
+#div1 input{
+	border-radius:5px;
+}
+#nota{
+	font-size: 10px;
+}
+#linea{
+	text-align:center;
+}
+.regNewU {
+    text-align: center;
+    font-size: 10px;
 
+}
+.bReg{
+	border:1px solid black;
+	font-size: 15px;
+	border-radius: 10px;
+}
 
 
 footer{

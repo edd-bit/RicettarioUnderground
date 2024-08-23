@@ -27,36 +27,39 @@
 </div>
 
 <div class=container id=div1>
-<h3>Form di registrazione</h3>
+<h3>Form di Registrazione</h3>
 
 <form:form modelAttribute="formRegistrazioneU" method="POST" action="/ricettariospring/utente/inserimentoNuovoUtente"> 
 																						<!--  richiama il metodo inserimentoUtente -->
 	<p>
         <form:label path="email_utente">Email Utente:</form:label>
+        <br>
         <form:input path="email_utente" placeholder="esempio@email.com"/>
     </p>
     <p>
         <form:label path="passw_utente">Password:</form:label>
+         <br>
         <form:input path="passw_utente" type="password" placeholder="password" />
     </p>
+    <p id=nota>Compila questi campi per registrarti</p>
     <input type="submit" value="Registrati" />
     
     
 </form:form>
+
+
+<br>
+<p id=linea>___________________________</p>
+	<div class=regNewU>
+	
+		<a id=bSx href="http://localhost:8080/ricettariospring/home"><button class=bReg >Home</button></a>
+		<br>
+		<p>Torna alla home e accedi al tuo profilo</p>
+	</div>
+	<br>
 </div>
 <br>
-<%String msgerr = (String) request.getAttribute("error");
-if(msgerr==null){
-	msgerr=" ";
-	out.println(msgerr);
-}
-	
-%>
 
-<%=msgerr %>
-<br>
-<br>
-<a href="http://localhost:8080/ricettariospring/home"><button class = "btn btn-outline-info">Vai alla Homepage</button></a>
 <footer id="footer">
     	<p>
     		&copy; 2024 Ricettario. Tutti i diritti riservati. | 
