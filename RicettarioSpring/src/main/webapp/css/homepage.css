@@ -94,7 +94,7 @@ body{
 
 #btnScopriRic:hover{
 	
-	background-color: orange;
+	background-color:#FFD700;
 	transform: scale(1.1);
 }
 .divRicette{
@@ -118,7 +118,7 @@ body{
 	transition: transform ease-in-out 0.1s;
 }
 .btnRic:hover{
-	background-color: orange;
+	background-color:#FFD700;
 	transform: scale(1.05);	
 }
 footer{
