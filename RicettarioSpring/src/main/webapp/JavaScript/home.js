@@ -5,10 +5,12 @@ document.addEventListener("DOMContentLoaded", function(){
 	const btnScopriRicette = document.getElementById("btnScopriRic");
 	const divScopriRicette = document.getElementById("scopriRicette");
 	
-	btnScopriRicette.addEventListener('click', function() {
+	btnScopriRicette.addEventListener('click', function(e) {
 		
 		divRicette.classList.toggle('show');
 		divScopriRicette.style.display='none';
+		console.log("Questi sono i dettagli tecnici dell'evento scatenato: ", e)
+		
 		
 	});
 	
