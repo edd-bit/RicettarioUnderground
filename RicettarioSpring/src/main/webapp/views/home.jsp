@@ -67,7 +67,7 @@
 			Secondi
 		</button>
 		<button class=btnRic>
-			Contori
+			Contorni
 		</button>
 		<button class=btnRic>
 			Dolci

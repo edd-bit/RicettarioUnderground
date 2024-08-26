@@ -3,34 +3,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>home utente</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/homeUtenteStyle.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/homepageUtente.css">
+
+<meta charset="UTF-8">
+<title>Home RicettarioSpring</title>
 
 </head>
 <body>
-	
-	<!-- <a href="http://localhost:8080/ricettariospring/home"><button class = "btn btn-outline-info">Vai alla Homepage</button></a> -->
-	<div id=divheader>
+
+<div id=divheader>
 	<div id=divH1> <a href="http://localhost:8080/ricettariospring/home"><img alt="logo" src="${pageContext.request.contextPath}/img/RICETTARIO_LOGO1.png"></a></div> 
 	
 	<div class=notVisible></div>
 	
-	<!--  <div id=divH2><a href="/ricettariospring/utente/formAccessoUtente"> Accedi</a></div>-->
-	<div id=divH2>
-	 <!-- Icona del profilo -->
-	 <p> <i class="bi bi-person"></i>Profilo </p>
-	 </div>
+	<div id=divH2><a href="/ricettariospring/utente/formAccessoUtente"> Accedi</a></div>
 </div>
 
 <!-- ---------------------------------- -->
 <div class=generale>
-	<h3>Questa è la home Utente  di RicettarioSpring</h3>
+	<h3>Questa è la home Utente di RicettarioSpring</h3>
 		<br>
 		<br>
-	</div>
 	
+	<!--<a href="/ricettariospring/utente/formAccessoUtente"><button class = "btn btn-primary"> Accedi come Utente</button></a>-->
+	<!-- ragionamento di Sonia e Marco  -->
+	<!-- <input type="submit" value="homeUtente"/> -->
+		
+	<!--<button class = "btn btn-primary">Accedi come Dipendente</button>
+		<br>
+		<br>-->
+	<!--
+	<div class=regNewU>
+		<h5>Sei un nuovo utente?</h5>
+		<br>
+		<a  id=bSx href="/ricettariospring/utente/formRegistrazioneUtenti"><button  class = "btn btn-primary">Registrati</button></a>
+	</div>
+	-->
+	
+	
+</div>
+		
+	<div class=divRicette>
+		<button class=btnRic>
+			Antipasti
+		</button>
+			<a href="${pageContext.request.contextPath}/primi/PrimiPiatti">
+   				 <button class="btnRic">
+       				 Primi
+    			</button>
+			</a>
+		<button class=btnRic>
+			Secondi
+		</button>
+		<button class=btnRic>
+			Contorni
+		</button>
+		<button class=btnRic>
+			Dolci
+		</button>
+	</div>
+	<br>
 	<footer id="footer">
     	<p>
     		&copy; 2024 Ricettario. Tutti i diritti riservati. | 
@@ -44,3 +78,8 @@
 	
 </body>
 </html>
+
+
+
+
+
