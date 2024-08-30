@@ -38,6 +38,14 @@
                 <p class="mb-1">Un classico della cucina romana, preparato con uova, pecorino, guanciale e pepe nero.</p>
             </a>
             <a href="#" class="list-group-item list-group-item-action">
+                <h4 class="mb-1">Zucchine ripiene di Marco (senza glutine)</h4>
+                <p class="mb-1">Un classico della cucina boh, preparato da Marco con tanto amore.</p>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <h4 class="mb-1">Zucchine ripiene veg</h4>
+                <p class="mb-1">Un grande classico rivisitato.</p>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
                 <h4 class="mb-1">Amatriciana</h4>
                 <p class="mb-1">Pasta con salsa di pomodoro, guanciale e pecorino romano.</p>
             </a>
