@@ -26,63 +26,100 @@
     </div>
 
     <!-- Titolo della pagina -->
-<h3>Questa è la pagina dei primi piatti</h3>
+
 
 <div class="container">
         <h1 class="text-center my-4">10 Primi Piatti Famosi in Italia</h1>
         
         <!-- Lista dei primi piatti famosi -->
-        <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action">
+        <div class="row" >
+        <!-- class="list-group-item list-group-item-action" -->
+           <div class="col-md-4 mb-4">
+           <a href="#" >
                 <h4 class="mb-1">Carbonara</h4>
                 <p class="mb-1">Un classico della cucina romana, preparato con uova, pecorino, guanciale e pepe nero.</p>
             </a>
-            <a href="#" class="list-group-item list-group-item-action">
+            </div>
+           <div class="col-md-4 mb-4"> 
+            <a href="#" >
                 <h4 class="mb-1">Zucchine ripiene di Marco (senza glutine)</h4>
                 <p class="mb-1">Un classico della cucina boh, preparato da Marco con tanto amore.</p>
             </a>
-            <a href="#" class="list-group-item list-group-item-action">
+            </div> 
+            
+            <div class="col-md-4 mb-4"> 
+            <a href="#" >
                 <h4 class="mb-1">Zucchine ripiene veg</h4>
                 <p class="mb-1">Un grande classico rivisitato.</p>
             </a>
-            <a href="#" class="list-group-item list-group-item-action">
+             </div>
+             
+            <div class="col-md-4 mb-4">
+            <a href="#" >
                 <h4 class="mb-1">Amatriciana</h4>
                 <p class="mb-1">Pasta con salsa di pomodoro, guanciale e pecorino romano.</p>
             </a>
-            <a href="#" class="list-group-item list-group-item-action">
+            </div>
+            
+            <div class="col-md-4 mb-4">
+            <a href="#" >
                 <h4 class="mb-1">Lasagne alla Bolognese</h4>
                 <p class="mb-1">Strati di pasta all’uovo con ragù di carne, besciamella e parmigiano.</p>
             </a>
-            <a href="#" class="list-group-item list-group-item-action">
+            </div>
+            
+            <div class="col-md-4 mb-4">
+            <a href="#" >
                 <h4 class="mb-1">Risotto alla Milanese</h4>
                 <p class="mb-1">Un risotto cremoso con zafferano, tipico di Milano.</p>
             </a>
-            <a href="#" class="list-group-item list-group-item-action">
+            </div>
+            
+            <div class="col-md-4 mb-4">
+            <a href="#" >
                 <h4 class="mb-1">Pasta al Pesto</h4>
                 <p class="mb-1">Pasta con pesto genovese a base di basilico, pinoli e parmigiano.</p>
             </a>
-            <a href="#" class="list-group-item list-group-item-action">
+            </div>
+            
+            <div class="col-md-4 mb-4">
+            <a href="#" >
                 <h4 class="mb-1">Spaghetti alle Vongole</h4>
                 <p class="mb-1">Spaghetti con vongole fresche, aglio, olio e prezzemolo.</p>
             </a>
-            <a href="#" class="list-group-item list-group-item-action">
+            </div>
+            
+            <div class="col-md-4 mb-4">
+            <a href="#" >
                 <h4 class="mb-1">Trofie al Pesto</h4>
                 <p class="mb-1">Pasta tipica della Liguria condita con pesto genovese.</p>
             </a>
-            <a href="#" class="list-group-item list-group-item-action">
+            </div>
+            
+            <div class="col-md-4 mb-4">
+            <a href="#">
                 <h4 class="mb-1">Orecchiette alle Cime di Rapa</h4>
                 <p class="mb-1">Pasta tipica pugliese con cime di rapa, aglio e acciughe.</p>
             </a>
-            <a href="#" class="list-group-item list-group-item-action">
+            </div>
+            
+            <div class="col-md-4 mb-4">
+            <a href="#" >
                 <h4 class="mb-1">Spaghetti Cacio e Pepe</h4>
                 <p class="mb-1">Un piatto romano semplice a base di pecorino romano e pepe nero.</p>
             </a>
-            <a href="#" class="list-group-item list-group-item-action">
+            </div>
+            
+            <div class="col-md-4 mb-4">
+            <a href="#" >
                 <h4 class="mb-1">Pasta alla Norma</h4>
                 <p class="mb-1">Pasta siciliana con melanzane fritte, salsa di pomodoro e ricotta salata.</p>
             </a>
+            </div>
         </div>
     </div>
+    
+
     
      <!-- Footer -->
     <footer id="footer">
